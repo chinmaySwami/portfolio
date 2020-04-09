@@ -22,5 +22,6 @@ import projects.views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('basepage.urls')),
-    path('^projects/', include('projects.urls')),
+    path('projects/', include('projects.urls')),
+    path('education/', include('education.urls'))
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
