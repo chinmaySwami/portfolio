@@ -1,12 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Hello</title>
-</head>
-<body>
+{% extends "projects/base.html" %}
+
+{% block content %}
 {% for project in projs.all%}
-{{project.summary}}
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="{{project.image.url}}" alt="Card image cap">
+      <div class="card-body">
+        <p class="card-text">{{project.description}}</p>
+        <a href="#" class="btn btn-primary">Git link</a>
+      </div>
+    </div>
 {% endfor %}
-</body>
-</html>
+{% endblock %}
